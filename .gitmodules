@@ -1,0 +1,3 @@
+[submodule ".config/micro/plug/micro-cheat"]
+	path = .config/micro/plug/micro-cheat
+	url = https://github.com/terokarvinen/micro-cheat

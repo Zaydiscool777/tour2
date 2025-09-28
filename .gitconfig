@@ -1,0 +1,28 @@
+[init]
+	defaultBranch = main
+[user]
+	email = zaydiscool777@gmail.com
+	name = Zayd Mohammed
+[alias]
+	tree = log --oneline --graph --decorate --all
+	replace = "reset --hard "
+	c = commit
+	f = fetch
+	aa = add .
+	p = pull
+	ps = push
+	co = checkout
+	b = branch
+	ch = diff HEAD
+	po = push origin
+	stat = status
+	h = help
+	poh = push origin HEAD
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[https]
+	postBuffer = 1048576000

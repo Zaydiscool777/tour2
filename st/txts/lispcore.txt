@@ -1,0 +1,24 @@
+document by paul graham [lisp = list proccesing]
+atom = alnum
+list = (zero or more items sepera tedbywhi tespace)
+all function returns are assumed to be evaluated
+[all atoms are evaluated by functions? [like variables]]
+assume a,b,c... E quote atom; l,m,n... E quote list
+(quote x) returns `x` [like a literal, shorthand 'x] [the function quote handles it before the interpreter]
+(atom a) returns a [the atom t is true in lisp]
+(atom l) returns '() [() is false in common lisp, 'f is in orig. lisp]
+(eq a a) returns 't
+(eq a b) returns '() [a is not b]
+[(eq '() '()) returns 't?]
+(eq l x) returns '()
+(eq x l) returns '()
+(car '(x ...)) returns x [content addresspart registered]
+(car '()) returns '()
+(cdr '(x y z...)) returns '(y z...) [decrementpart]
+(cdr '(x)) returns '()
+(cdr '()) returns '()
+(cons 'x '(y z...)) returns (x y z...) [actally how lists are defined!]
+(cond (x0 y0) (x1 y1)...) returns the first y where its x is 't [none are 't = '()] [macro of ifs in scheme & common lisp]
+lambda in (lambda (a 'x) l) and label in (label a 'x) are implemented by meta-evaluator
+the 7 core expressions are: quote atom eq car cdr cons lambda
+[() actually evaluates to itself, '() [common lisp, but not in scheme or orig. lisp]]

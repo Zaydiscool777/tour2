@@ -1,0 +1,24 @@
+{
+	// w.i.p. theme
+	"workbench.colorCustomizations": {
+		"focusBorder": "#0ee",
+		//"foreground": "#fff",
+		"disabledForeground": "#fff",
+		"widget.shadow": "#fff0",
+		"selection.background": "#0bb7",
+		"descriptionForeground": "#bbb",
+		"errorForeground": "#f00",
+		"icon.foreground": "#000",
+		"sash.hoverBorder": "#bbb",
+
+		"button.background": "#fff",
+		"button.foreground": "#000",
+		"button.hoverBackground": "#7b7",
+		"checkbox.background": "#fff",
+		"checkbox.foreground": "#000",
+		"checkbox.disabled.background": "#bbb",
+		"checkbox.disabled.foreground": "#bbb",
+		"checkbox.border": "#bbb"
+
+	}
+}

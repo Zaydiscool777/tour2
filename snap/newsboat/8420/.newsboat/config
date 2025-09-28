@@ -1,0 +1,16 @@
+auto-reload yes
+browser links
+macro m set browser "mpv --pause "; open-in-browser; set browser links
+macro n set browser "timg --threads=4 "; open-in-browser; set browser links
+macro c set browser "curl -o curled "; open-in-browser; set browser links
+color background          white   black
+color listnormal          white   black
+color listfocus           yellow  black underline
+color listnormal_unread   cyan    black
+color listfocus_unread    cyan    black underline reverse
+color title               white   black
+color info                white   black
+color hint-key            white   black
+color hint-keys-delimiter white   black
+color hint-separator      white   black
+color hint-description    white   black
