@@ -1,0 +1,42 @@
+-- demo\rosetta\EchoServer.exw
+without js
+include builtins\sockets.e
+constant ESCAPE = #1B
+procedure echo(atom sockd)
+    ?{"socket opened",sockd}
+    string buffer = ""
+    integer bytes_sent
+    bool first = true
+    while true do
+        {integer len, string s} = recv(sockd)
+        if len<=0 then exit end if
+        if first then
+            bytes_sent = send(sockd, s) -- partial echo, see note
+            first = false
+        end if
+        buffer &= s
+        if s[$]='\n' then
+            bytes_sent = send(sockd, buffer)
+            buffer = ""
+        end if
+    end while
+    ?{"socket disconnected",sockd}
+end procedure
+
+atom list_s = socket(AF_INET,SOCK_STREAM,NULL),
+     pSockAddr = sockaddr_in(AF_INET, "", 12321)
+if list_s<0 then ?9/0 end if
+if bind(list_s, pSockAddr)=SOCKET_ERROR then crash("bind (%v)",{get_socket_error()}) end if
+if listen(list_s,100)=SOCKET_ERROR then crash("listen (%v)",{get_socket_error()}) end if
+puts(1,"echo server started, press escape or q to exit\n")
+while not find(get_key(),{ESCAPE,'q','Q'}) do
+    {integer code} = select({list_s},{},{},250000)  -- (0.25s)
+    if code=SOCKET_ERROR then crash("select (%v)",{get_socket_error()}) end if
+    if code>0 then  -- (not timeout)
+        atom conn_s = accept(list_s)
+        if conn_s=SOCKET_ERROR then ?9/0 end if
+        atom hThread = create_thread(echo,{conn_s})
+    end if
+end while
+list_s = closesocket(list_s)
+WSACleanup()

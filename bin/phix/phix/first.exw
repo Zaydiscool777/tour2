@@ -1,0 +1,109 @@
+-- comment
+// this too
+/* one fish
+two fish /*nestable  ->*/<- */
+? sqrt(2)
+? "hello"
+/*
+<======== object ========>
+|             |
++-atom/number +-sequence
+  |             |
+  +-integer     +-string */
+number x = 5.2
+// x = "error"
+? x
+// keyword...end keyword
+integer i = 1
+while i <= 5 do
+	? i
+	i += 1
+end while
+-- = can only assign or check, since assigning doesn't return
+for i := 5 to 1 by -1 do
+	? i -- you can also use := and == in their contexts
+end for
+
+number p = 4
+if p < 1 then
+	? "p is small"
+elsif p > 10 then
+	? "p is big"
+else
+	? "p is normal"
+end if
+
+// variables are consistent
+? 'A' + 32 -- 97
+pp({1,2,3} & "fish")
+
+// sq_ prefix applies to whole sequence
+? sq_add({1, 2, 3}, 10)
+? sq_add({1, 2, 3}, {4, 5, 6})
+
+// functions always return
+function add2(number x, number y)
+	return x + y
+end function
+
+// procedure do not return a value
+procedure sq_inc(sequence l)
+	for i = 1 to length(l) do -- one-indices...
+		l[i] += 1
+	end for
+	p = 5
+end procedure
+
+// data types
+type positive(number x)
+	if x < 0 then
+		? "positive error"
+	end if
+	return (x < 0)
+end type
+
+try
+	? 3 / 0
+catch e
+	? "caught"
+end try
+
+number a, b, c
+{a, b, c} = {1, 2, 3}
+{a, c} = {c, a}
+         -- [1] [2] [3] [4] [5]
+sequence s={ 69, 67, 42, 27, 63}
+         -- [-5][-4][-3][-2][-1]
+? s[2]
+? s[2..2]
+? s[2..4] -- {67,42,27}
+? s[3..2] -- {}
+s[3..2] = {9001} -- element 3 is 9001
+s[1..0] = {-1} -- prepend
+s[$+1..$] = {1} -- append
+s[0..-1] = {"eof"}
+? s
+s[2..3] = {}
+
+?find(42, s)
+?match({27,63}, s)
+? sort(s)
+? upper("upper")
+? log(2.718)
+? trunc(-1.4)
+? floor(-1.4)
+? tagset(10)
+include builtins/regex.e
+? gsub(`c.t`, "cite citie's center", "@")
+struct point
+	number x = 0
+	number y = 0
+end struct // not a sequence, index by p.x/p.y
+
+class Pair
+	public integer x, y
+	private integer secret
+end class
+
+class Point extends Pair
+end class

@@ -20,7 +20,7 @@ certifi                  2023.11.17
 cffi                     1.17.1
 chardet                  5.2.0
 click                    8.1.6
-cloud-init               25.1.4
+cloud-init               25.2
 colorama                 0.4.6
 command-not-found        0.3
 configobj                5.0.8
@@ -119,6 +119,7 @@ soupsieve                2.5
 SpeechRecognition        3.14.3
 sympy                    1.12
 systemd-python           235
+terminaltexteffects      0.12.0
 tornado                  6.4
 tqdm                     0.0.0
 Twisted                  24.3.0

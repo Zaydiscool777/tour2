@@ -1,0 +1,130 @@
+/usr/local/bin/builtins/sockets.e:6
+crash(`requires WINDOWS, this is LINUX`)
+... called from /home/zaydm/bin/phix/echoserver.exw:3
+
+Global & Local Variables
+
+ /usr/local/bin/builtins/cffi.e:
+    s = <novalue>
+    ch = <novalue>
+    sidx = <novalue>
+    L = 4
+    SizeNames = <novalue>
+    SizeSigns = <novalue>
+    Sizes = <novalue>
+    as_char = <novalue>
+    as_uchar = <novalue>
+    as_int = <novalue>
+    as_uint = <novalue>
+    as_ptr = <novalue>
+    as_short = <novalue>
+    as_ushort = <novalue>
+    as_long = <novalue>
+    as_ulong = <novalue>
+    as_float = <novalue>
+    as_double = <novalue>
+    as_int64 = <novalue>
+    as_uint64 = <novalue>
+    AltNames = <novalue>
+    AltSize = <novalue>
+    unicode = -1
+    UnicodeNames = <novalue>
+    UnicodeAs = <novalue>
+    convert_types = 0
+    structs = <novalue>
+    stsizes = <novalue>
+    saligns = <novalue>
+    smembers = <novalue>
+    dll_names = <novalue>
+    dll_addrs = <novalue>
+    C_SIZES = <novalue>
+    C_CONSTS = <novalue>
+    cffi_init = 0
+
+ /usr/local/bin/builtins/sockets.e:
+    sock_init = 0
+    xWSAStartup = 0
+    xWSAGetLastError = 0
+    id_WSADATA = <novalue>
+    xWSACleanup = 0
+
+ /usr/local/bin/builtins/VM/pcfunc.e:
+    libaninit = 0
+    libaddrs = <novalue>
+    libnames = <novalue>
+    libsafe = <novalue>
+    table = <novalue>
+    previd = <novalue>
+    prevcb = <novalue>
+    tinit = 0
+    tcs = <novalue>
+    tmax = 0
+
+ /home/zaydm/bin/phix/echoserver.exw:
+    list_s = <novalue>
+    pSockAddr = <novalue>
+
+ /usr/local/bin/builtins/VM/pprntfN.e:
+    init2 = 1
+    inf = inf
+    nan = nan
+    prefer_backtick = 0
+    hexchar = `0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`
+    dxoetc = `dxobstncvVRefgEXG`
+    bases = {10,16,8,2}
+    unicode_align = 0
+    asChdef = 0
+
+ /home/zaydm/bin/phix/echoserver.exw:
+    code = <novalue>
+    conn_s = <novalue>
+    hThread = <novalue>
+
+ /usr/local/bin/builtins/VM/pThreadN.e:
+    init = 0
+    kernel32 = <novalue>
+    xCreateEvent = <novalue>
+    xSetEvent = <novalue>
+    xResetEvent = <novalue>
+    xWaitForSingleObject = <novalue>
+    xGetExitCodeThread = <novalue>
+    xSuspendThread = <novalue>
+    xResumeThread = <novalue>
+    xCloseHandle = <novalue>
+    xGetLastError = <novalue>
+    suspended = <novalue>
+    suspendcs = <novalue>
+    susp_cs = <novalue>
+
+ /usr/local/bin/builtins/get_interpreter.e:
+    vsets = {{},{`pw.exe`,`pw32.exe`,`pw64.exe`,`p64.exe`,`p32.exe`,`p.exe`},{`p`,`p32`,`p64`,`pth`}}
+    platforms = {`DOS32`,`WINDOWS`,`LINUX`,`JS`,`ARM`}
+    vinit = 1
+    xmb = 0
+
+ /usr/local/bin/builtins/syswait.ew:
+    swinit = 0
+    kernel32 = <novalue>
+    xCreateProcess = <novalue>
+    xWaitForSingleObject = <novalue>
+    xGetExitCodeProcess = <novalue>
+    xCloseHandle = <novalue>
+    shell32 = <novalue>
+    xShellExecute = <novalue>
+    Wait = 1
+    doevents = -1
+    doeventparams = <novalue>
+
+ /usr/local/bin/builtins/VM/pcmdlnN.e:
+    init = 0
+    xKernel32 = <novalue>
+    xGetCommandLine = <novalue>
+    xSearchPath = <novalue>
+    dotEXE = <novalue>
+    pFilePart = <novalue>
+
+ /usr/local/bin/builtins/scanf.e:
+    baseset = <novalue>
+    bases = <novalue>
+    binit = 0
+    scan_ch = <novalue>

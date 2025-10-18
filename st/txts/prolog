@@ -1,0 +1,15 @@
+predicates:
+thing
+thing(a)
+thing(a,b,c,d)
+thing(a) :- thing2(a) # thing2(a) IMPLIES thing1(a)
+thing(a) :- thing2(a), thing3(a,a) # AND
+queries:
+?- thing(a) # either yes or no
+yes
+?- thing(A)
+A = a
+[next]y # prompt
+A = b
+[next]y
+no
