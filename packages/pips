@@ -117,6 +117,7 @@ setuptools               68.1.2
 six                      1.16.0
 soupsieve                2.5
 SpeechRecognition        3.14.3
+ssh-import-id            5.11
 sympy                    1.12
 systemd-python           235
 terminaltexteffects      0.12.0
