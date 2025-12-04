@@ -3,8 +3,9 @@
     "Ctrl-G": "ToggleHelp",
     "CtrlUnderscore": "lua:comment.comment",
     "F1": "command:help",
-    "F4": "command:jumptag",
     "F6": "command-edit:gorename ",
     "F8": "command:cheat",
-    "Ctrl-R": "command:replaceall"
+    "Ctrl-R": "command:replaceall",
+    "F9": "command:vsplit",
+    "Alt-F9": "command:hsplit"
 }
