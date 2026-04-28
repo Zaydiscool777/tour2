@@ -25,4 +25,19 @@ telnet:
 - shattered.org
 - fibs.com (usern: zaydm)
 - (more: https://telnet.org/htm/places.htm)
-ssh zaydm@::, windows: ssh zaydm@192.168.68.122
+ssh:
+- zaydm@:: (:: == ::1 == localhost == 127.0.0.1)
+  - windows: zaydm@192.168.68.122
+- menu@tty.sdf.org
+ffmpeg:
+- concatenate mp4s (and a few others)
+  - ffmpeg -f concat -i l -c copy o.mp4
+  - l is a text file where files are put by "file 'filename.mp4'\n"
+  - .mp4 extension is required for recognization
+- split an mp4 into equal intervals
+  - ffmpeg -i i.mp4 -c copy -map 0 -segment_time 10 -f segment o%03d.mp4
+  - %03 means: o001.mp4, o002.mp4, etc.
+- compress video
+  - ffmpeg -i i.mp4 -c:v libx264 -crf 24 -preset slow o.mp4
+    - the -preset can be medium, slow, or veryslow
+phix smalltalk lean4
